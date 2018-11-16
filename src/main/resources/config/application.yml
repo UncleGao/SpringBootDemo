@@ -1,0 +1,28 @@
+server:
+  port: 80
+  
+spring:
+    datasource:
+        name: test
+        drive-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/test?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+        username: root
+        password: 123456
+        maxActive: 20
+        maxIdle: 2
+        minIdle: 1
+        maxWait: 60000
+        initialSize: 2
+        validationQuery: SELECT 1
+
+## 该配置节点为独立的节点，有很多同学容易将这个配置放在spring的节点下，导致配置无法被识别
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.gj.demo.mapper  # 注意：对应实体类的路径
+
+#pagehelper分页插件
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql

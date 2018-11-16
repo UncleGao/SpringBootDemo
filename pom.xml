@@ -40,15 +40,20 @@
 
 		<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.thymeleaf/thymeleaf -->
-<!-- 		<dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency> -->
+		</dependency>
 		<!--spring boot依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
+		<dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.3.0</version>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -93,30 +98,28 @@
 			<dependency>
 				<groupId>com.google.code.gson</groupId>
 				<artifactId>gson</artifactId>
-				<version>${gosn.version}</version>
-			</dependency>
+				</dependency>
 
 			<dependency>
 				<groupId>com.github.pagehelper</groupId>
 				<artifactId>pagehelper</artifactId>
 				<version>${mybatis.pagehelper}</version>
 			</dependency>
-			<dependency>
+<!-- 			<dependency>
 				<groupId>org.mybatis</groupId>
 				<artifactId>mybatis-spring</artifactId>
 				<version>${mybatis-spring.version}</version>
-			</dependency>
-			<dependency>
+			</dependency> -->
+<!-- 			<dependency>
 				<groupId>org.mybatis</groupId>
 				<artifactId>mybatis</artifactId>
 				<version>${mybatis.version}</version>
-			</dependency>
+			</dependency> -->
 			<!-- Joda Time -->
 			<dependency>
 				<groupId>joda-time</groupId>
 				<artifactId>joda-time</artifactId>
-				<version>${joda.time}</version>
-			</dependency>
+				</dependency>
 			<!--shiro依赖 -->
 			<dependency>
 				<groupId>org.apache.shiro</groupId>
@@ -136,8 +139,7 @@
 			<dependency>
 				<groupId>mysql</groupId>
 				<artifactId>mysql-connector-java</artifactId>
-				<version>${mysql-connector-java.version}</version>
-			</dependency>
+				</dependency>
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>druid</artifactId>
@@ -152,8 +154,7 @@
 			<dependency>
 				<groupId>net.sf.ehcache</groupId>
 				<artifactId>ehcache</artifactId>
-				<version>${ehcache.version}</version>
-			</dependency>
+				</dependency>
 
 			<dependency>
 				<groupId>org.apache.commons</groupId>
@@ -170,7 +171,6 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
-			<version>${apache.httpclient.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>commons-codec</groupId>
@@ -185,13 +185,11 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpmime</artifactId>
-			<version>${apache.httpclient.version}</version>
-		</dependency>
+			</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpcore</artifactId>
-			<version>${apache.httpcore.version}</version>
-		</dependency>
+			</dependency>
 
 
 		<dependency>
