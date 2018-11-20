@@ -30,7 +30,6 @@
 		<joda.time>2.2</joda.time>
 		<mybatis.version>3.2.2</mybatis.version>
 		<mybatis-spring.version>1.3.1</mybatis-spring.version>
-		<mybatis.pagehelper>5.0.0</mybatis.pagehelper>
 		<gosn.version>2.8.2</gosn.version>
 		<guava.version>23.6-jre</guava.version>
 		<apache.httpclient.version>4.2.5</apache.httpclient.version>
@@ -53,6 +52,11 @@
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>1.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.1.2</version>
         </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -100,21 +104,6 @@
 				<artifactId>gson</artifactId>
 				</dependency>
 
-			<dependency>
-				<groupId>com.github.pagehelper</groupId>
-				<artifactId>pagehelper</artifactId>
-				<version>${mybatis.pagehelper}</version>
-			</dependency>
-<!-- 			<dependency>
-				<groupId>org.mybatis</groupId>
-				<artifactId>mybatis-spring</artifactId>
-				<version>${mybatis-spring.version}</version>
-			</dependency> -->
-<!-- 			<dependency>
-				<groupId>org.mybatis</groupId>
-				<artifactId>mybatis</artifactId>
-				<version>${mybatis.version}</version>
-			</dependency> -->
 			<!-- Joda Time -->
 			<dependency>
 				<groupId>joda-time</groupId>
@@ -167,46 +156,6 @@
 				<version>${ehcache.core.version}</version>
 			</dependency>
 			
-				<!-- Apache httpclient -->
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>commons-codec</groupId>
-					<artifactId>commons-codec</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>commons-logging</groupId>
-					<artifactId>commons-logging</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpmime</artifactId>
-			</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpcore</artifactId>
-			</dependency>
-
-
-		<dependency>
-			<groupId>commons-httpclient</groupId>
-			<artifactId>commons-httpclient</artifactId>
-			<version>${commons.httpclient.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>commons-codec</groupId>
-					<artifactId>commons-codec</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>commons-logging</groupId>
-					<artifactId>commons-logging</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
 		</dependencies>
 		
 	<build>
